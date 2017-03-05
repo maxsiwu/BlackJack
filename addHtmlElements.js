@@ -289,4 +289,99 @@ function addPageElements(){
 	closeBtn.style.backgroundColor = "transparent"
 	overlayArea.appendChild(closeBtn)
 
+
+	//form area
+	var formArea = document.createElement('div')
+	formArea.id="form-area"
+	formArea.style.top = "200px"
+	formArea.style.right= "50px"
+	formArea.style.width="400px"
+	formArea.style.height = "200px"
+	formArea.style.position = "absolute"
+	formArea.style.opacity = 0
+	formArea.style.transition = "0.3s"
+	containerDiv.appendChild(formArea)
+
+	//submit form
+	var form = document.createElement('div')
+	form.id = "submit-form"
+	form.style.position = "absolute"
+	form.style.top = "50px"
+	form.style.boxSizing = "border-box"
+	form.style.left = "20px"
+	form.style.width = "300px"
+	form.style.height = "200px"
+	form.style.padding = "5px"
+	form.style.borderRadius = "5px"
+	form.style.fontFamily = FONT
+	form.style.fontSize = "16px"
+	form.style.color = "green"
+	form.style.backgroundColor = "white"
+	formArea.appendChild(form)
+
+	//label
+	var nameInput = document.createElement('label')
+	nameInput.id = "user-name-label"
+	nameInput.innerHTML = "Enter name:"
+	nameInput.style.position = "absolute"
+	nameInput.style.top = "10px"
+	nameInput.style.boxSizing = "border-box"
+	nameInput.style.left = "20px"
+	nameInput.style.width = "140px"
+	nameInput.style.padding = "5px"
+	nameInput.style.borderRadius = "5px"
+	nameInput.style.fontFamily = FONT
+	nameInput.style.fontSize = "16px"
+	nameInput.style.color = "green"
+	nameInput.style.backgroundColor = "white"
+	form.appendChild(nameInput)
+
+	//input
+	var nameInput = document.createElement('input')
+	nameInput.id = "user-name"
+	nameInput.style.position = "absolute"
+	nameInput.style.top = "40px"
+	nameInput.style.boxSizing = "border-box"
+	nameInput.style.left = "20px"
+	nameInput.style.width = "180px"
+	nameInput.style.padding = "5px"
+	nameInput.style.borderRadius = "5px"
+	nameInput.style.fontFamily = FONT
+	nameInput.style.fontSize = "16px"
+	nameInput.style.color = "green"
+	nameInput.style.backgroundColor = "white"
+	form.appendChild(nameInput)
+
+	//balance paragraph
+	var currentBalance = document.createElement('p')
+	currentBalance.id = "current-balance"
+	currentBalance.style.position = "absolute"
+	currentBalance.style.top = "70px"
+	currentBalance.style.boxSizing = "border-box"
+	currentBalance.style.left = "20px"
+	currentBalance.style.fontFamily = FONT
+	currentBalance.style.fontSize = "16px"
+	currentBalance.style.color = "black"
+	form.appendChild(currentBalance)
+
+	//submit score button
+	var submitBalanceBtn = document.createElement('button')
+	submitBalanceBtn.id = "submit-balance-button"
+	submitBalanceBtn.style.position = "absolute"
+	submitBalanceBtn.style.top = "120px"
+	submitBalanceBtn.style.boxSizing = "border-box"
+	submitBalanceBtn.style.left = "20px"
+	submitBalanceBtn.style.width = "140px"
+	submitBalanceBtn.innerHTML = "Submit Now"
+	submitBalanceBtn.style.padding = "5px"
+	submitBalanceBtn.style.borderRadius = "5px"
+	submitBalanceBtn.style.fontFamily = FONT
+	submitBalanceBtn.style.fontSize = "16px"
+	submitBalanceBtn.style.color = "white"
+	submitBalanceBtn.style.backgroundColor = "green"
+	form.appendChild(submitBalanceBtn)
+
+	//score Board
+
+
 }

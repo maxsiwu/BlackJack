@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Score scoreboard</title>
+	<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyAcfNJa-0IIQIvvJmMV4h9nQCsVsdQ9Ouo",
+		authDomain: "maxstart-4a003.firebaseapp.com",
+		databaseURL: "https://maxstart-4a003.firebaseio.com",
+		storageBucket: "maxstart-4a003.appspot.com",
+		messagingSenderId: "577600679495"
+	};
+	firebase.initializeApp(config);
+	</script>
+	<script src="scoreboard.js"></script>
+</head>
+<body>
+    <div class="scoreboard-container">
+    <h3>Score Board</h3>
+    <table id="score-table">
+        <tr>
+            <th>Name</th>
+            <th>Balance</th>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>

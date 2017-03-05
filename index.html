@@ -2,12 +2,25 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Super Black Jack</title>
 	<script src="addHtmlElements.js"></script>
 	<script src="chip.js"></script>
 	<script src="card.js"></script>
 	<script src="dealer.js"></script>
 	<script src="player.js"></script>
+	<!-- firebase script starts here-->
+	<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyAcfNJa-0IIQIvvJmMV4h9nQCsVsdQ9Ouo",
+		authDomain: "maxstart-4a003.firebaseapp.com",
+		databaseURL: "https://maxstart-4a003.firebaseio.com",
+		storageBucket: "maxstart-4a003.appspot.com",
+		messagingSenderId: "577600679495"
+	};
+	firebase.initializeApp(config);
+	</script>
 	<script src="game.js"></script>
 	<script src="script.js"></script>
 </head>

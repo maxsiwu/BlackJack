@@ -23,11 +23,16 @@ var Game = function() {
   var allChips = document.getElementsByClassName("chips")
   var resetWager = document.getElementById('resetWager')
   var overlayArea = document.getElementById('overlay-area')
+  var balanceTosubmit = document.getElementById('current-balance')
+  var formDiv = document.getElementById('form-area')
+  var submitBalanceBtn = document.getElementById('submit-balance-button')
+  var input = document.getElementById("user-name")
 
   dealBtn.disabled = true
   hitBtn.disabled = true
   standBtn.disabled = true
   resetBtn.disabled = true
+  submitBalanceBtn.disabled = true
 
   //--------------------------all click functions--------------------------//
   dealBtn.onclick = function(){
@@ -287,9 +292,22 @@ var Game = function() {
   }
 
   submitBtn.onclick = function(){
-    alert("Your current balance is: $" + (balance + wager));
+    balanceTosubmit.innerHTML = "Your current balance is: $" + (balance + wager)
+    formDiv.style.opacity = 1
+    submitBalanceBtn.disabled = false;
   }
 
+  submitBalanceBtn.onclick = function(){
+    if(input.value == ''){
+      alert('You have no name')
+    }else{
+      formDiv.style.opacity = 0
+      submitBalanceBtn.disabled = true
+      playerBalance = {name: input.value, balance: balance}
+      const databaseRef = firebase.database().ref().child('playerScores')
+      databaseRef.push(playerBalance)
+    }
+  }
 }
 
 function changeBalanceDisplay(balanceAmount){
