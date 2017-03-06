@@ -27,6 +27,7 @@ var Game = function() {
   var formDiv = document.getElementById('form-area')
   var submitBalanceBtn = document.getElementById('submit-balance-button')
   var input = document.getElementById("user-name")
+  var closeSubmBtn = document.getElementById('close-submition-button')
 
   dealBtn.disabled = true
   hitBtn.disabled = true
@@ -303,10 +304,19 @@ var Game = function() {
     }else{
       formDiv.style.opacity = 0
       submitBalanceBtn.disabled = true
-      playerBalance = {name: input.value, balance: balance}
+      playerBalance = {name: input.value, balance: -balance, date: Date.now()}
       const databaseRef = firebase.database().ref().child('playerScores')
       databaseRef.push(playerBalance)
     }
+  }
+
+  closeSubmBtn.onclick = function(){
+      formDiv.style.opacity = 0;
+      submitBalanceBtn.disabled = true;
+  }
+
+  leaderBtn.onclick = function(){
+    location='scoreboard.html';
   }
 }
 

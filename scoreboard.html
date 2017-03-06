@@ -5,7 +5,6 @@
 	<title>Score scoreboard</title>
 	<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
 	<script>
-	// Initialize Firebase
 	var config = {
 		apiKey: "AIzaSyAcfNJa-0IIQIvvJmMV4h9nQCsVsdQ9Ouo",
 		authDomain: "maxstart-4a003.firebaseapp.com",
@@ -16,16 +15,24 @@
 	firebase.initializeApp(config);
 	</script>
 	<script src="scoreboard.js"></script>
+    <script src="https://use.fontawesome.com/a57bbf329f.js"></script>
+    <link rel="stylesheet" type="text/css" href="styleScoreBoard.css">
 </head>
 <body>
-    <div class="scoreboard-container">
-    <h3>Score Board</h3>
-    <table id="score-table">
-        <tr>
-            <th>Name</th>
-            <th>Balance</th>
-        </tr>
-    </table>
+    <div id="scoreboard-container">
+        <div id="board">
+            <h3><i class="fa fa-trophy" aria-hidden="true"></i>&nbsp;Score Board</h3>
+            <table id="score-table">
+                <tr>
+                    <th>Name</th>
+                    <th>Balance</th>
+                    <th>Date</th>
+                </tr>
+            </table>
+            <br>
+            <a href="index.html">Back to Game</a>
+        </div>
+
     </div>
 </body>
 </html>

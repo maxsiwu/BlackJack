@@ -293,8 +293,8 @@ function addPageElements(){
 	//form area
 	var formArea = document.createElement('div')
 	formArea.id="form-area"
-	formArea.style.top = "200px"
-	formArea.style.right= "50px"
+	formArea.style.top = "220px"
+	formArea.style.left= "120px"
 	formArea.style.width="400px"
 	formArea.style.height = "200px"
 	formArea.style.position = "absolute"
@@ -381,7 +381,21 @@ function addPageElements(){
 	submitBalanceBtn.style.backgroundColor = "green"
 	form.appendChild(submitBalanceBtn)
 
-	//score Board
+	//close menu button
+	var closeSubBtn = document.createElement('button')
+	closeSubBtn.id = "close-submition-button"
+	closeSubBtn.style.position = "absolute"
+	closeSubBtn.style.boxSizing = "border-box"
+	closeSubBtn.style.right = "0px"
+	closeSubBtn.style.outline = "none"
+	closeSubBtn.style.border = "none"
+	closeSubBtn.innerHTML = "&#x274E;"
+	closeSubBtn.style.padding = "5px"
+	closeSubBtn.style.fontFamily = FONT
+	closeSubBtn.style.fontSize = "40px"
+	closeSubBtn.style.color = "green"
+	closeSubBtn.style.backgroundColor = "transparent"
+	form.appendChild(closeSubBtn)
 
 
 }
